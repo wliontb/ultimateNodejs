@@ -1,0 +1,26 @@
+<%- include('header') -%>
+<style>
+.one {
+    border:1px solid #9cf;padding:5px;
+}
+
+.one div {
+    border-bottom:1px dashed #000;
+}
+</style>
+<div class="col-md-12"><p><h1><%= data.name %></h1></p></div>
+<div class="col-md-6 one">
+    <div class="col-md-12"><b>Tác giả :</b> <%= data.author %></div>
+    <div class="col-md-12"><b>Thể loại :</b> <%= data.type %></div>
+    <div class="col-md-12"><b>Nội dung :</b> <%= data.content %></div>
+</div>
+<div class="col-md-6">
+    <div class="list-group">
+        <a href="/" class="list-group-item list-group-item-action list-group-item-primary">Danh sách</a>
+        <a href="/add" class="list-group-item list-group-item-action list-group-item-success">Thêm sách mới</a>
+        <a href="/edit/<%= id %>" class="list-group-item list-group-item-action list-group-item-warning">Sửa sách này</a>
+        <a href="/delete/<%= id %>" class="list-group-item list-group-item-action list-group-item-danger">Xóa sách này</a>
+    </div>
+</div>
+
+<%- include('footer') -%>

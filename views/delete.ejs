@@ -1,0 +1,17 @@
+<%- include('header') -%>
+<div class="col-md-12">
+    <div class="mt-5 alert alert-warning center" role="alert">
+    <h4 class="alert-heading">Xác nhận xóa!</h4>
+    <p>Bạn có thực sự muốn xóa sách <b><%= data.name %></b> của tác giả <b><%= data.author %></b> </p>
+    <hr>
+    <p class="mb-0">
+    <form action="" method="post">
+        <input type="submit" class="btn btn-danger btn-sm" value="Xóa">
+        <a href="/" class="btn btn-secondary btn-sm">quay lại</a>
+    </form>
+    
+    </p>
+    </div>
+</div>
+    
+<%- include('footer') -%>

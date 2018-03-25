@@ -1,0 +1,31 @@
+<%- include('header') -%>
+
+<div class="col-md-12">
+        <p><h1>Sửa sách <%= data.name %></h1></p>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="">Tên sách</label>
+                <input type="text" name="name" value="<%= data.name %>" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Tác giả</label>
+                <input type="text" name="author" value="<%= data.author %>" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="">Thể loại</label>
+                <input type="text" name="type" value="<%= data.type %>" class="form-control">
+            </div>
+            
+            <div class="form-group">
+                <label for="">Nội dung</label>
+                <textarea name="content" id="" cols="30" rows="10" class="form-control"><%= data.content %></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary">
+            </div>
+            
+        </form>
+</div>
+
+<%- include('footer') -%>

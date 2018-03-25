@@ -1,0 +1,20 @@
+<%- include('header') -%>
+    <div class="col-md-12">
+      <h1>Chọn sách bạn cần chỉnh sửa</h1>
+    </div>
+    <div class="col-md-6 list-group">
+        <% datas.forEach(function(i,key){ %>
+          <a href="/edit/<%= key %>" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1"><%= i.name %></h5>
+              <small><%= i.author %></small>
+            </div>
+            <p class="mb-1"><%= i.content %></p>
+            <small><%= i.type %></small>
+          </a>         
+        <% }); %>
+    </div>
+    <div class="col-md-6">
+      <%- include('sidebar') -%>
+    </div>
+<%- include('footer') -%>
